@@ -72,6 +72,13 @@ namespace TwitterSearchApp.iOS
             View.AddSubview (_indicator);
         }
 
+        public override void ViewWillAppear (bool animated)
+        {
+            base.ViewWillAppear (animated);
+
+            ResultsTableVIew.DeselectRow (ResultsTableVIew.IndexPathForSelectedRow, true);
+        }
+
         public override void DidReceiveMemoryWarning ()
         {
             base.DidReceiveMemoryWarning ();
