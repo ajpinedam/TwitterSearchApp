@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="65" id="cxk-wN-pdQ" customClass="ResultsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <frame key="frameInset" width="320" height="65"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zu9-8C-Hsj">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="T5f-1t-e1q"/>
+                            <constraint firstAttribute="height" constant="60" id="gaw-l2-X3g"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Megsoft on Aug 25 2016" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASe-AL-1ht">
+                        <frame key="frameInset" minX="72" minY="41" width="248" height="21"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Xamarin Rocks! It's Amazing all you can do in just a few hours" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCm-k6-TpN">
+                        <frame key="frameInset" minX="72" minY="2" width="248" height="37"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="LCm-k6-TpN" secondAttribute="trailing" id="3Uj-Nk-w2K"/>
+                    <constraint firstItem="ASe-AL-1ht" firstAttribute="top" relation="greaterThanOrEqual" secondItem="LCm-k6-TpN" secondAttribute="bottom" constant="2" id="3n4-ef-Vto"/>
+                    <constraint firstItem="LCm-k6-TpN" firstAttribute="leading" secondItem="Zu9-8C-Hsj" secondAttribute="trailing" constant="4" id="A6f-6z-aiN"/>
+                    <constraint firstItem="LCm-k6-TpN" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="2" id="Frc-vG-5xe"/>
+                    <constraint firstItem="Zu9-8C-Hsj" firstAttribute="centerY" secondItem="YTl-1W-gDM" secondAttribute="centerY" id="MjX-ZC-JMW"/>
+                    <constraint firstItem="Zu9-8C-Hsj" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="8" id="UDL-X1-5ks"/>
+                    <constraint firstAttribute="bottom" secondItem="ASe-AL-1ht" secondAttribute="bottom" constant="2.5" id="WeM-RA-mxq"/>
+                    <constraint firstAttribute="trailing" secondItem="ASe-AL-1ht" secondAttribute="trailing" id="i0P-eR-RSW"/>
+                    <constraint firstItem="ASe-AL-1ht" firstAttribute="leading" secondItem="Zu9-8C-Hsj" secondAttribute="trailing" constant="4" id="oUq-Cu-XKP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="ResultImageView" destination="Zu9-8C-Hsj" id="fwo-mx-umL"/>
+                <outlet property="TwittDetail" destination="ASe-AL-1ht" id="MVi-19-kzi"/>
+                <outlet property="TwittText" destination="LCm-k6-TpN" id="4h6-Qa-SuN"/>
+            </connections>
+            <point key="canvasLocation" x="-128" y="-90.5"/>
+        </tableViewCell>
+    </objects>
+</document>
