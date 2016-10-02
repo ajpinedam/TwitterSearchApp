@@ -10,6 +10,8 @@ namespace TwitterSearchApp.iOS
     public class SearchResultDataSource : UITableViewSource
     {
 
+        public event EventHandler<SearchResult> NewRowSelected;
+
         IList<SearchResult> Items { get; set; } = new List<SearchResult> ();
 
 
@@ -51,6 +53,11 @@ namespace TwitterSearchApp.iOS
         public override nfloat GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
         {
             return 70;
+        }
+
+        public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
+        {
+            NewRowSelected?.Invoke (this, Items [indexPath.Row]);
         }
     }
 }

@@ -38,6 +38,8 @@ namespace TwitterSearchApp.iOS
 
             _searchDataSource = new SearchResultDataSource ();
 
+            _searchDataSource.NewRowSelected += _searchDataSource_NewRowSelected;
+
             _indicator = new UIActivityIndicatorView (new CGRect (0,0,60,60));
             _indicator.HidesWhenStopped = true;
             _indicator.ActivityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray;
@@ -110,6 +112,12 @@ namespace TwitterSearchApp.iOS
         void DismissKeyBoard ()
         {
             View.EndEditing (true);
+        }
+
+        void _searchDataSource_NewRowSelected (object sender, SearchResult e)
+        {
+            var detailViewController = Storyboard.InstantiateViewController ("DetailViewController");
+            NavigationController.PushViewController (detailViewController, true);
         }
     }
 }

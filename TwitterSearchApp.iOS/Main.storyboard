@@ -76,7 +76,7 @@
         <!--Detail View Controller-->
         <scene sceneID="225">
             <objects>
-                <viewController id="226" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="226" customClass="DetailViewController" sceneMemberID="viewController" storyboardIdentifier="DetailViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="223"/>
                         <viewControllerLayoutGuide type="bottom" id="224"/>

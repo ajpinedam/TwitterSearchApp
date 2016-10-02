@@ -23,6 +23,8 @@ namespace TwitterSearchApp.iOS
 
         public void FillView (SearchResult searchResult)
         {
+            ResultImageView.LayoutIfNeeded ();
+
             ResultImageView.RoundImage ();
 
             TwittText.Text = searchResult.TwitterText;
